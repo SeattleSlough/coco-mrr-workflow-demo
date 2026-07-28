@@ -1,0 +1,252 @@
+[0m14:42:07.575895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb6c999d0f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb6c85aaa70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb6c85aaa10>]}
+
+
+============================== 14:42:07.579350 | 1399ea8a-b74b-4d1d-b3ad-8d59e6157f6d ==============================
+[0m14:42:07.579350 [info ] [MainThread]: Running with dbt=1.12.0
+[0m14:42:07.579714 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'no_print': 'None', 'static_parser': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/maggs/.dbt', 'write_json': 'True', 'quiet': 'False', 'printer_width': '80', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt run -s monthly_recurring_revenue', 'use_colors': 'True', 'empty': 'False', 'log_path': 'logs', 'indirect_selection': 'eager', 'target_path': 'None', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'hints_enabled': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'maximum_seed_size_mib': '1', 'use_experimental_parser': 'False', 'warn_error': 'None'}
+[0m14:42:07.580064 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/maggs/job_search/snowflake/saas_billing_project/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:42:07.580936 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.075724535, "process_in_blocks": "62328", "process_kernel_time": 0.159155, "process_mem_max_rss": "103028", "process_out_blocks": "8", "process_user_time": 0.980064}
+[0m14:42:07.581247 [debug] [MainThread]: Command `dbt run` failed at 14:42:07.581183 after 0.08 seconds
+[0m14:42:07.581479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb6c999d0f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb6c85ab190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb6c85aaa70>]}
+[0m14:42:07.581711 [debug] [MainThread]: Flushing usage events
+[0m14:42:07.909218 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:44:39.605019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d350a1090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d33cae9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d33cae950>]}
+
+
+============================== 14:44:39.607765 | 3cfceb0a-bc48-462d-b9c1-b50a606551ec ==============================
+[0m14:44:39.607765 [info ] [MainThread]: Running with dbt=1.12.0
+[0m14:44:39.608151 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'debug': 'False', 'invocation_command': 'dbt run -s monthly_recurring_revenue', 'log_cache_events': 'False', 'partial_parse': 'True', 'fail_fast': 'False', 'target_path': 'None', 'write_json': 'True', 'profiles_dir': '/home/maggs/.dbt', 'log_format': 'default', 'empty': 'False', 'version_check': 'True', 'hints_enabled': 'True', 'printer_width': '80', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'log_path': '/home/maggs/job_search/snowflake/saas_billing_project/logs', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'introspect': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'static_parser': 'True', 'maximum_seed_size_mib': '1'}
+[0m14:44:39.942852 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:44:39.943260 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:44:39.943528 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:44:40.124719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3cfceb0a-bc48-462d-b9c1-b50a606551ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d33c36290>]}
+[0m14:44:40.172168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3cfceb0a-bc48-462d-b9c1-b50a606551ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d33d9f250>]}
+[0m14:44:40.173352 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m14:44:40.228816 [debug] [MainThread]: checksum: 3c26875f9066801703c2065059a11f5c5c741249e432f5ad9c4a27838ce61a02, vars: {}, profile: saas_billing_project, target: dev, version: 1.12.0
+[0m14:44:40.229344 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:44:40.229699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3cfceb0a-bc48-462d-b9c1-b50a606551ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d3109d810>]}
+[0m14:44:41.194412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3cfceb0a-bc48-462d-b9c1-b50a606551ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d30a53e50>]}
+[0m14:44:41.263880 [debug] [MainThread]: Wrote artifact WritableManifest to /home/maggs/job_search/snowflake/saas_billing_project/target/manifest.json
+[0m14:44:41.265764 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/maggs/job_search/snowflake/saas_billing_project/target/semantic_manifest.json
+[0m14:44:41.278436 [debug] [MainThread]: Wrote artifact OsiDocument to /home/maggs/job_search/snowflake/saas_billing_project/target/osi_document.json
+[0m14:44:41.286590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3cfceb0a-bc48-462d-b9c1-b50a606551ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d30a4bd60>]}
+[0m14:44:41.286998 [info ] [MainThread]: Found 6 models, 5 sources, 545 macros
+[0m14:44:41.287287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3cfceb0a-bc48-462d-b9c1-b50a606551ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d31096bc0>]}
+[0m14:44:41.288149 [info ] [MainThread]: 
+[0m14:44:41.288437 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:44:41.288662 [info ] [MainThread]: 
+[0m14:44:41.289067 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:44:41.289804 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SAAS_BILLING'
+[0m14:44:41.298647 [debug] [ThreadPool]: Using snowflake connection "list_SAAS_BILLING"
+[0m14:44:41.299009 [debug] [ThreadPool]: On list_SAAS_BILLING: show terse schemas in database SAAS_BILLING
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "saas_billing_project", "target_name": "dev", "connection_name": "list_SAAS_BILLING"} */
+[0m14:44:41.299246 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:44:43.601533 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.720 seconds
+[0m14:44:43.610919 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_SAAS_BILLING, now list_SAAS_BILLING_ANALYTICS)
+[0m14:44:43.618841 [debug] [ThreadPool]: Using snowflake connection "list_SAAS_BILLING_ANALYTICS"
+[0m14:44:43.619175 [debug] [ThreadPool]: On list_SAAS_BILLING_ANALYTICS: show objects in SAAS_BILLING.ANALYTICS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "saas_billing_project", "target_name": "dev", "connection_name": "list_SAAS_BILLING_ANALYTICS"} */;
+[0m14:44:43.868689 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.249 seconds
+[0m14:44:43.873176 [debug] [ThreadPool]: Using snowflake connection "list_SAAS_BILLING_ANALYTICS"
+[0m14:44:43.873545 [debug] [ThreadPool]: On list_SAAS_BILLING_ANALYTICS: show user functions in SAAS_BILLING.ANALYTICS
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "saas_billing_project", "target_name": "dev", "connection_name": "list_SAAS_BILLING_ANALYTICS"} */
+[0m14:44:44.010234 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.136 seconds
+[0m14:44:44.012347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3cfceb0a-bc48-462d-b9c1-b50a606551ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d30146aa0>]}
+[0m14:44:44.019900 [debug] [Thread-2 (]: Began running node model.saas_billing_project.monthly_recurring_revenue
+[0m14:44:44.020407 [info ] [Thread-2 (]: 1 of 1 START sql table model ANALYTICS.monthly_recurring_revenue ............... [RUN]
+[0m14:44:44.020939 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SAAS_BILLING_ANALYTICS, now model.saas_billing_project.monthly_recurring_revenue)
+[0m14:44:44.021238 [debug] [Thread-2 (]: Began compiling node model.saas_billing_project.monthly_recurring_revenue
+[0m14:44:44.026127 [debug] [Thread-2 (]: Writing injected SQL for node "model.saas_billing_project.monthly_recurring_revenue"
+[0m14:44:44.026983 [debug] [Thread-2 (]: Began executing node model.saas_billing_project.monthly_recurring_revenue
+[0m14:44:44.047664 [debug] [Thread-2 (]: Writing runtime sql for node "model.saas_billing_project.monthly_recurring_revenue"
+[0m14:44:44.049583 [debug] [Thread-2 (]: Using snowflake connection "model.saas_billing_project.monthly_recurring_revenue"
+[0m14:44:44.049964 [debug] [Thread-2 (]: On model.saas_billing_project.monthly_recurring_revenue: create or replace transient table SAAS_BILLING.ANALYTICS.monthly_recurring_revenue
+    
+    
+    
+    
+    
+
+    as (with subscriptions as (
+    select * from SAAS_BILLING.ANALYTICS.stg_subscriptions
+),
+
+plan_changes as (
+    select * from SAAS_BILLING.ANALYTICS.stg_plan_changes
+),
+
+cancellations as (
+    select * from SAAS_BILLING.ANALYTICS.stg_cancellations
+),
+
+-- Generate a spine of months from earliest subscription to current month
+month_spine as (
+    select
+        dateadd(month, row_number() over (order by seq4()) - 1,
+            (select min(date_trunc('month', start_date)) from subscriptions)
+        ) as month_start
+    from table(generator(rowcount => 120))
+    qualify month_start <= date_trunc('month', current_date())
+),
+
+-- For each subscription, determine the last month it should contribute MRR
+subscription_months as (
+    select
+        s.subscription_id,
+        s.monthly_price as original_price,
+        s.start_date,
+        m.month_start,
+        c.cancellation_date
+    from subscriptions s
+    cross join month_spine m
+    left join cancellations c
+        on s.subscription_id = c.subscription_id
+    where m.month_start >= date_trunc('month', s.start_date)
+      and (c.cancellation_date is null or m.month_start < date_trunc('month', c.cancellation_date))
+),
+
+-- Join plan changes that occurred on or before each month, rank to find most recent
+ranked_changes as (
+    select
+        sm.subscription_id,
+        sm.month_start,
+        sm.original_price,
+        pc.new_price,
+        row_number() over (
+            partition by sm.subscription_id, sm.month_start
+            order by pc.change_date desc
+        ) as rn
+    from subscription_months sm
+    inner join plan_changes pc
+        on sm.subscription_id = pc.subscription_id
+        and pc.change_date <= last_day(sm.month_start)
+),
+
+-- Determine effective price: most recent plan change price, or original if no changes
+effective_price as (
+    select
+        sm.subscription_id,
+        sm.month_start,
+        coalesce(rc.new_price, sm.original_price) as monthly_price
+    from subscription_months sm
+    left join ranked_changes rc
+        on sm.subscription_id = rc.subscription_id
+        and sm.month_start = rc.month_start
+        and rc.rn = 1
+)
+
+select
+    month_start as month,
+    sum(monthly_price) as mrr
+from effective_price
+group by month_start
+order by month_start
+    )
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "saas_billing_project", "target_name": "dev", "node_id": "model.saas_billing_project.monthly_recurring_revenue"} */;
+[0m14:44:46.854652 [debug] [Thread-2 (]: SQL status: SUCCESS 19 in 2.804 seconds
+[0m14:44:46.872237 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3cfceb0a-bc48-462d-b9c1-b50a606551ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d33cad0c0>]}
+[0m14:44:46.872848 [info ] [Thread-2 (]: 1 of 1 OK created sql table model ANALYTICS.monthly_recurring_revenue .......... [[32mSUCCESS 19[0m in 2.85s]
+[0m14:44:46.873298 [debug] [Thread-2 (]: Finished running node model.saas_billing_project.monthly_recurring_revenue
+[0m14:44:46.874429 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:44:46.874690 [debug] [MainThread]: Connection 'model.saas_billing_project.monthly_recurring_revenue' was left open.
+[0m14:44:46.874932 [debug] [MainThread]: On model.saas_billing_project.monthly_recurring_revenue: Close
+[0m14:44:47.044789 [info ] [MainThread]: 
+[0m14:44:47.045522 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 5.76 seconds (5.76s).
+[0m14:44:47.046302 [debug] [MainThread]: Command end result
+[0m14:44:47.075094 [debug] [MainThread]: Wrote artifact WritableManifest to /home/maggs/job_search/snowflake/saas_billing_project/target/manifest.json
+[0m14:44:47.076509 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/maggs/job_search/snowflake/saas_billing_project/target/semantic_manifest.json
+[0m14:44:47.077637 [debug] [MainThread]: Wrote artifact OsiDocument to /home/maggs/job_search/snowflake/saas_billing_project/target/osi_document.json
+[0m14:44:47.082392 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/maggs/job_search/snowflake/saas_billing_project/target/run_results.json
+[0m14:44:47.082642 [info ] [MainThread]: 
+[0m14:44:47.082953 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:44:47.083193 [info ] [MainThread]: 
+[0m14:44:47.083460 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m14:44:47.084477 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.951183, "process_in_blocks": "113032", "process_kernel_time": 0.266528, "process_mem_max_rss": "167908", "process_out_blocks": "4112", "process_user_time": 2.711094}
+[0m14:44:47.084814 [debug] [MainThread]: Command `dbt run` succeeded at 14:44:47.084745 after 5.95 seconds
+[0m14:44:47.085082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d350a1090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d30b0e2f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x768d33d9f250>]}
+[0m14:44:47.085354 [debug] [MainThread]: Flushing usage events
+[0m14:44:47.404193 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:46:45.241078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee11da1030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee109aa980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee109aa920>]}
+
+
+============================== 14:46:45.243998 | 0ad548ea-2e38-4443-8b13-3a7b4398e93a ==============================
+[0m14:46:45.243998 [info ] [MainThread]: Running with dbt=1.12.0
+[0m14:46:45.244403 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'warn_error': 'None', 'partial_parse': 'True', 'log_path': '/home/maggs/job_search/snowflake/saas_billing_project/logs', 'hints_enabled': 'True', 'version_check': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'empty': 'None', 'use_experimental_parser': 'False', 'invocation_command': 'dbt show --inline SELECT * FROM ANALYTICS.MONTHLY_RECURRING_REVENUE ORDER BY month', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/maggs/.dbt', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'target_path': 'None', 'printer_width': '80', 'quiet': 'False', 'log_cache_events': 'False', 'debug': 'False'}
+[0m14:46:45.552436 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m14:46:45.552873 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m14:46:45.553140 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:46:45.720944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0ad548ea-2e38-4443-8b13-3a7b4398e93a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee0e07bf70>]}
+[0m14:46:45.770202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0ad548ea-2e38-4443-8b13-3a7b4398e93a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee10912530>]}
+[0m14:46:45.778489 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m14:46:45.833247 [debug] [MainThread]: checksum: 3c26875f9066801703c2065059a11f5c5c741249e432f5ad9c4a27838ce61a02, vars: {}, profile: saas_billing_project, target: dev, version: 1.12.0
+[0m14:46:45.994225 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:46:45.994642 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:46:45.994897 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:46:46.001778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0ad548ea-2e38-4443-8b13-3a7b4398e93a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee0d8584c0>]}
+[0m14:46:46.092853 [debug] [MainThread]: Wrote artifact WritableManifest to /home/maggs/job_search/snowflake/saas_billing_project/target/manifest.json
+[0m14:46:46.094810 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/maggs/job_search/snowflake/saas_billing_project/target/semantic_manifest.json
+[0m14:46:46.108334 [debug] [MainThread]: Wrote artifact OsiDocument to /home/maggs/job_search/snowflake/saas_billing_project/target/osi_document.json
+[0m14:46:46.225674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0ad548ea-2e38-4443-8b13-3a7b4398e93a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee0d85b850>]}
+[0m14:46:46.226106 [info ] [MainThread]: Found 6 models, 1 sql operation, 5 sources, 545 macros
+[0m14:46:46.226423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0ad548ea-2e38-4443-8b13-3a7b4398e93a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee0d85b850>]}
+[0m14:46:46.227576 [info ] [MainThread]: 
+[0m14:46:46.227879 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:46:46.228114 [info ] [MainThread]: 
+[0m14:46:46.228456 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m14:46:46.232619 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SAAS_BILLING_ANALYTICS'
+[0m14:46:46.246651 [debug] [ThreadPool]: Using snowflake connection "list_SAAS_BILLING_ANALYTICS"
+[0m14:46:46.247272 [debug] [ThreadPool]: On list_SAAS_BILLING_ANALYTICS: show objects in SAAS_BILLING.ANALYTICS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "saas_billing_project", "target_name": "dev", "connection_name": "list_SAAS_BILLING_ANALYTICS"} */;
+[0m14:46:46.247676 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:46:46.981959 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.734 seconds
+[0m14:46:46.986406 [debug] [ThreadPool]: Using snowflake connection "list_SAAS_BILLING_ANALYTICS"
+[0m14:46:46.986743 [debug] [ThreadPool]: On list_SAAS_BILLING_ANALYTICS: show user functions in SAAS_BILLING.ANALYTICS
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "saas_billing_project", "target_name": "dev", "connection_name": "list_SAAS_BILLING_ANALYTICS"} */
+[0m14:46:47.124171 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.137 seconds
+[0m14:46:47.127519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0ad548ea-2e38-4443-8b13-3a7b4398e93a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee0da84340>]}
+[0m14:46:47.135331 [debug] [Thread-2 (]: Began running node sql_operation.saas_billing_project.inline_query
+[0m14:46:47.135747 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SAAS_BILLING_ANALYTICS, now sql_operation.saas_billing_project.inline_query)
+[0m14:46:47.136054 [debug] [Thread-2 (]: Began compiling node sql_operation.saas_billing_project.inline_query
+[0m14:46:47.140897 [debug] [Thread-2 (]: Writing injected SQL for node "sql_operation.saas_billing_project.inline_query"
+[0m14:46:47.142198 [debug] [Thread-2 (]: Began executing node sql_operation.saas_billing_project.inline_query
+[0m14:46:47.146893 [debug] [Thread-2 (]: Using snowflake connection "sql_operation.saas_billing_project.inline_query"
+[0m14:46:47.147200 [debug] [Thread-2 (]: On sql_operation.saas_billing_project.inline_query: SELECT * FROM ANALYTICS.MONTHLY_RECURRING_REVENUE ORDER BY month
+  
+  limit 5
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "saas_billing_project", "target_name": "dev", "node_id": "sql_operation.saas_billing_project.inline_query"} */
+[0m14:46:47.486910 [debug] [Thread-2 (]: SQL status: SUCCESS 5 in 0.339 seconds
+[0m14:46:47.491717 [debug] [Thread-2 (]: Finished running node sql_operation.saas_billing_project.inline_query
+[0m14:46:47.492924 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:46:47.493205 [debug] [MainThread]: Connection 'sql_operation.saas_billing_project.inline_query' was left open.
+[0m14:46:47.493438 [debug] [MainThread]: On sql_operation.saas_billing_project.inline_query: Close
+[0m14:46:48.000721 [debug] [MainThread]: Command end result
+[0m14:46:48.027452 [debug] [MainThread]: Wrote artifact WritableManifest to /home/maggs/job_search/snowflake/saas_billing_project/target/manifest.json
+[0m14:46:48.028854 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/maggs/job_search/snowflake/saas_billing_project/target/semantic_manifest.json
+[0m14:46:48.030033 [debug] [MainThread]: Wrote artifact OsiDocument to /home/maggs/job_search/snowflake/saas_billing_project/target/osi_document.json
+[0m14:46:48.035399 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/maggs/job_search/snowflake/saas_billing_project/target/run_results.json
+[0m14:46:48.036628 [info ] [MainThread]: Previewing inline node:
+|      MONTH | MRR |
+| ---------- | --- |
+| 2025-01-01 | 108 |
+| 2025-02-01 | 216 |
+| 2025-03-01 | 386 |
+| 2025-04-01 | 556 |
+| 2025-05-01 | 556 |
+
+[0m14:46:48.037671 [debug] [MainThread]: Resource report: {"command_name": "show", "command_success": true, "command_wall_clock_time": 2.854273, "process_in_blocks": "119088", "process_kernel_time": 0.232623, "process_mem_max_rss": "161864", "process_out_blocks": "2800", "process_user_time": 1.968993}
+[0m14:46:48.038253 [debug] [MainThread]: Command `dbt show` succeeded at 14:46:48.037958 after 2.85 seconds
+[0m14:46:48.038618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee11da1030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee0f319510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bee0e07bf70>]}
+[0m14:46:48.038906 [debug] [MainThread]: Flushing usage events
+[0m14:46:48.348554 [debug] [MainThread]: An error was encountered while trying to flush usage events

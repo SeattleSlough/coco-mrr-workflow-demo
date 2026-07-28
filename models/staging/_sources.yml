@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    database: SAAS_BILLING
+    schema: RAW
+    tables:
+      - name: customers
+      - name: subscriptions
+      - name: plan_changes
+      - name: invoices
+      - name: cancellations
