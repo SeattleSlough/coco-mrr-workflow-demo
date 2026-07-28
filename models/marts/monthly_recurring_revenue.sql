@@ -10,7 +10,26 @@ cancellations as (
     select * from {{ ref('stg_cancellations') }}
 ),
 
--- Generate a spine of months from earliest subscription to current month
+invoices as (
+    select * from {{ ref('stg_invoices') }}
+),
+
+refunds as (
+    select * from {{ ref('stg_refunds') }}
+),
+
+-- Flag invoices that were fully refunded
+fully_refunded_invoices as (
+    select
+        i.invoice_id,
+        i.subscription_id,
+        date_trunc('month', i.invoice_date) as invoice_month
+    from invoices i
+    inner join refunds r
+        on i.invoice_id = r.invoice_id
+    where r.refund_amount = i.amount
+),
+
 month_spine as (
     select
         dateadd(month, row_number() over (order by seq4()) - 1,
@@ -20,7 +39,6 @@ month_spine as (
     qualify month_start <= date_trunc('month', current_date())
 ),
 
--- For each subscription, determine the last month it should contribute MRR
 subscription_months as (
     select
         s.subscription_id,
@@ -36,7 +54,6 @@ subscription_months as (
       and (c.cancellation_date is null or m.month_start < date_trunc('month', c.cancellation_date))
 ),
 
--- Join plan changes that occurred on or before each month, rank to find most recent
 ranked_changes as (
     select
         sm.subscription_id,
@@ -53,7 +70,6 @@ ranked_changes as (
         and pc.change_date <= last_day(sm.month_start)
 ),
 
--- Determine effective price: most recent plan change price, or original if no changes
 effective_price as (
     select
         sm.subscription_id,
@@ -64,11 +80,26 @@ effective_price as (
         on sm.subscription_id = rc.subscription_id
         and sm.month_start = rc.month_start
         and rc.rn = 1
+),
+
+-- Zero out any subscription-month whose invoice was fully refunded
+adjusted as (
+    select
+        ep.subscription_id,
+        ep.month_start,
+        case
+            when fri.invoice_id is not null then 0
+            else ep.monthly_price
+        end as monthly_price
+    from effective_price ep
+    left join fully_refunded_invoices fri
+        on ep.subscription_id = fri.subscription_id
+        and ep.month_start = fri.invoice_month
 )
 
 select
     month_start as month,
     sum(monthly_price) as mrr
-from effective_price
+from adjusted
 group by month_start
 order by month_start
