@@ -1,0 +1,9 @@
+sources:
+- name: raw
+  schema: RAW
+  tables:
+  - name: customers
+  - name: subscriptions
+  - name: plan_changes
+  - name: invoices
+  - name: cancellations
