@@ -21,6 +21,25 @@ cancellations as (
     select * from SAAS_BILLING.ANALYTICS.stg_cancellations
 ),
 
+invoices as (
+    select * from SAAS_BILLING.ANALYTICS.stg_invoices
+),
+
+refunds as (
+    select * from SAAS_BILLING.ANALYTICS.stg_refunds
+),
+
+-- Identify (subscription, month) pairs where the invoice was fully refunded
+fully_refunded_months as (
+    select
+        i.subscription_id,
+        date_trunc('month', i.invoice_date) as month_start
+    from invoices i
+    inner join refunds r
+        on i.invoice_id = r.invoice_id
+    where r.refund_amount = i.amount
+),
+
 -- Generate a spine of months from earliest subscription to current month
 month_spine as (
     select
@@ -69,12 +88,18 @@ effective_price as (
     select
         sm.subscription_id,
         sm.month_start,
-        coalesce(rc.new_price, sm.original_price) as monthly_price
+        case
+            when fr.subscription_id is not null then 0
+            else coalesce(rc.new_price, sm.original_price)
+        end as monthly_price
     from subscription_months sm
     left join ranked_changes rc
         on sm.subscription_id = rc.subscription_id
         and sm.month_start = rc.month_start
         and rc.rn = 1
+    left join fully_refunded_months fr
+        on sm.subscription_id = fr.subscription_id
+        and sm.month_start = fr.month_start
 )
 
 select
